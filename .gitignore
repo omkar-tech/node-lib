@@ -35,6 +35,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+packages/*/node_modules/
 
 # TypeScript v1 declaration files
 typings/
@@ -62,3 +63,8 @@ typings/
 
 # Build directories
 lib/
+packages/*/lib
+
+# ignore lock file
+packages/*/package-lock.json
+package-lock.json
