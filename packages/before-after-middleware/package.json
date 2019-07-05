@@ -1,6 +1,6 @@
 {
   "name": "@omkartech/before-after-middleware",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Module to do specific set of actions before and after lambda calls",
   "keywords": [
     "lambda"
@@ -20,7 +20,7 @@
     "test": "__tests__"
   },
   "dependencies": {
-    "@omkartech/validation-error": "^1.0.0",
+    "@omkartech/validation-error": "^1.1.0",
     "http": "0.0.0",
     "lodash": "^4.17.5",
     "warewolf": "^2.0.6"
