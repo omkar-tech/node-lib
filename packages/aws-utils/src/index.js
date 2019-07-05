@@ -16,7 +16,7 @@ export {
   TOPIC_FORMAT_APPENDED,
   TOPIC_FORMAT_NEW,
   TOPIC_FORMAT_OLD,
-  publishEnrollmentEvent,
+  publishSampleEvent,
 } from './sns';
 
 export { invokeLambda } from './lambda';

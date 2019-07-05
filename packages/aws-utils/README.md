@@ -19,13 +19,13 @@ import {
 } from '@omkar-tect/aws-utils'
 
 const stage = process.env.STAGE;
-const cart = await invokeLambda(`enrollment-service-${stage}-cart-get`, {
+const svcInvokeResp = await invokeLambda(`lambdaname-${stage}-get`, {
   pathParameters: {
-    EnrollmentPublicKey: enrollmentPublicKey,
+    Key: value,
   },
   queryStringParameters: {
-    SkipSave: true,
-    AutoAddBenefits: true,
+    Id: uui-123123,
+    AddChild: true,
   },
 }, {
   requestContext: adminRequestContext,
@@ -33,7 +33,7 @@ const cart = await invokeLambda(`enrollment-service-${stage}-cart-get`, {
 });
 
 // For asynchronous execution, you can supply "Event" for invocationType on the options
-const cart = await invokeLambda(`enrollment-service-${stage}-cart-get`, {
+const svcInvokeResp = await invokeLambda(`lambdaname-${stage}-get`, {
   pathParameters: {
     ...
   },
@@ -51,12 +51,12 @@ const cart = await invokeLambda(`enrollment-service-${stage}-cart-get`, {
 
 ```js
 import {
-  publishEnrollmentEvent,
+  publishSampleEvent,
   TOPIC_FORMAT_APPENDED,  
 } from '@omkar-tect/aws-utils'
 
 const stage = process.env.STAGE;
-await publishEnrollmentEvent('cart-commit', employeePublicKey, enrollmentPublicKey, { topicFormat: TOPIC_FORMAT_APPENDED, notificationTitle: 'Cart Committed' });
+await publishSampleEvent('topic-name', SomeOldKey, SomeNewKey, { topicFormat: TOPIC_FORMAT_APPENDED, notificationTitle: 'title' });
 ```
 
 ## S3
@@ -78,10 +78,10 @@ await uploadFileToS3({ bucket, key, body })
 
 // Utilities
 const exists = await s3FileExists({ bucket, key })
-const parsed = s3FileParser('s3://dev-ods-data/dynamotableschema/test.json')
+const parsed = s3FileParser('s3://omkartech-aws-utils-test/dynamotableschema/test.json')
 // "parsed" is an object with Bucket and Key properties:
 // {
-//   Bucket: 'dev-ods-data',
+//   Bucket: 'omkartech-aws-utils-test',
 //   Key: 'dynamotableschema/test.json'
 // }
 
