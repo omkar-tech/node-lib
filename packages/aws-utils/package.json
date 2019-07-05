@@ -60,5 +60,6 @@
     "eslint-plugin-import": "^2.7.0",
     "jest-cli": "^20.0.4",
     "rimraf": "^2.6.3"
-  }
+  },
+  "gitHead": "0ef074ee494f12377e30ef49b5d29b7e111ffa68"
 }
