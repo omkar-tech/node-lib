@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "8.10"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-export-extensions",
+    [
+      "transform-runtime",
+      {
+        "polyfill": false
+      }
+    ]
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}
