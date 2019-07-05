@@ -30,7 +30,6 @@ export const after = [
 
 function successController() {
   return (event, context, callback) => {
-    // console.log('BEFORE SUCCESS CONTROLLER');
     const errorResponse = context.errorResponseToReturn;
     if (errorResponse) {
       delete context.errorResponseToReturn;

@@ -16,7 +16,7 @@ export class ValidationError extends Error {
     }
     this.message = msg;
     this.name = 'ValidationError';
-    this.statusCode = 400;
+    this.statusCode = 400; // not sure if this is right.
     Error.captureStackTrace(this, ValidationError);
   }
 }

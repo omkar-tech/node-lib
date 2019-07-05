@@ -174,6 +174,10 @@ export const copyS3toS3 = async ({
   }
 };
 
+/**
+ * @description Moves a file from one s3 bucket to another bucket.
+ * @param {sourceBucket, sourceKey, targetBucket, targetKey} sourceBucket
+ */
 export const moveS3toS3 = async ({
   sourceBucket,
   sourceKey,
