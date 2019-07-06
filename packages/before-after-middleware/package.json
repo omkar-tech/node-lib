@@ -9,6 +9,9 @@
   "homepage": "https://github.com/omkar-tech/node-lib#readme",
   "license": "MIT",
   "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build:watch": "npm run build -- --watch",
     "build": "npm run clean && npm install && cross-env BABEL_ENV=commonjs babel src --ignore='**/*/*.test.js' --out-dir lib --source-maps=true --copy-files  --no-comments",
@@ -103,5 +106,5 @@
   "bugs": {
     "url": "https://github.com/omkar-tech/node-lib/issues"
   },
-  "gitHead": "8db07ae0ca72e9eed43615e1720ec749833c87dd"
+  "gitHead": "5e845df7d3f067e84ec42959eeb89c182e7f3230"
 }

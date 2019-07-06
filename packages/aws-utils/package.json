@@ -16,6 +16,9 @@
       "<rootDir>/node_modules/"
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -61,5 +64,5 @@
     "jest-cli": "^20.0.4",
     "rimraf": "^2.6.3"
   },
-  "gitHead": "8db07ae0ca72e9eed43615e1720ec749833c87dd"
+  "gitHead": "5e845df7d3f067e84ec42959eeb89c182e7f3230"
 }
