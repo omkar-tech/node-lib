@@ -1,6 +1,6 @@
 {
   "name": "@omkartech/generate-schema",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Generates a JSON schema from a given JSON file/JSON data",
   "keywords": [
     "schema"
