@@ -1,0 +1,55 @@
+{
+  "name": "@omkartech/role-policy",
+  "version": "1.2.0",
+  "description": "Policy rules for aws auth roles",
+  "keywords": [
+    "auth"
+  ],
+  "author": "Nachi Muthukumar",
+  "homepage": "https://github.com/omkar-tech/node-lib#readme",
+  "license": "MIT",
+  "main": "lib/role-policy.js",
+  "scripts": {
+    "test": "npm run clean && npm run build && jest",
+    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --source-maps=true --copy-files  --no-comments",
+    "clean": "rimraf lib coverage"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omkar-tech/node-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omkar-tech/node-lib/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.2",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "jest": "^24.8.0",
+    "rimraf": "^2.6.3"
+  },
+  "dependencies": {
+    "has-flag": "^4.0.0"
+  }
+}
