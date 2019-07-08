@@ -1,0 +1,98 @@
+{
+  "name": "@omkartech/generate-schema",
+  "version": "1.1.2",
+  "description": "Generates a JSON schema from a given JSON file/JSON data",
+  "keywords": [
+    "schema"
+  ],
+  "author": "Nachi Muthukumar",
+  "homepage": "https://github.com/omkar-tech/node-lib#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run clean && npm run build && jest",
+    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --source-maps=true --copy-files  --no-comments",
+    "clean": "rimraf lib coverage"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "generate-schema": "^2.6.0",
+    "is-uuid": "^1.0.2",
+    "json-schema-library": "^3.3.5",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "babel-eslint": "^10.0.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omkar-tech/node-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omkar-tech/node-lib/issues"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb-base",
+    "env": {
+      "node": true,
+      "jest": true
+    },
+    "plugins": [
+      "import"
+    ],
+    "root": true,
+    "rules": {
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "__tests__/**"
+          ]
+        }
+      ],
+      "import/prefer-default-export": 0,
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error",
+            "time",
+            "timeEnd",
+            "log"
+          ]
+        }
+      ],
+      "no-use-before-define": 0,
+      "no-param-reassign": 0,
+      "no-await-in-loop": [
+        "warn"
+      ],
+      "max-len": 0
+    }
+  }
+}
