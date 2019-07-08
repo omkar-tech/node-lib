@@ -1,0 +1,54 @@
+{
+  "name": "@omkartech/dynamodb-tables",
+  "version": "1.2.0",
+  "description": "Helper functoins for accessing DynamoDB Tables",
+  "keywords": [
+    "dynamodb"
+  ],
+  "author": "Nachi Muthukumar",
+  "homepage": "https://github.com/omkar-tech/node-lib#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run clean && npm run build && jest",
+    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --source-maps=true --copy-files  --no-comments",
+    "clean": "rimraf lib coverage"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omkar-tech/node-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omkar-tech/node-lib/issues"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.489.0",
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.2",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0"
+  }
+}
